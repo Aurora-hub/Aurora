@@ -1,0 +1,21 @@
+class Solution{
+public boolean isPalindrome(int x) {
+         if(x <= 9 && x >= 0){
+            return true;
+        }
+        if(x<0){
+            return false;
+        }
+        boolean res = false;
+        int sum = 0;
+        int num=x;
+        while (num!=0){
+            sum = sum * 10 + num % 10;
+            num = num / 10;
+        }
+        if(sum==x){
+            return true;
+        }else{
+            return false;
+        }
+    }
